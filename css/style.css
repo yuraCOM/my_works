@@ -1,0 +1,380 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+margin: 0px;
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+  margin: 0px;
+	background: #cddc39;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* ---------------------------------------*/
+.page_header{
+	border-bottom: 5px solid #9C27B0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-transform: uppercase;
+	font-family: 'Pangolin', cursive;
+	z-index: 1000;
+
+  /* IE10+ */
+  background-image: -ms-linear-gradient(bottom left, #ff0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #1F2BDF 87.5%, #2940D0 93.75%, #DB6195 96.875%, #AE27F6 98.4375%, #69A847 99.21875%, #C97ED4 99.609375%, #33CFCF 99.8046875%, #ff0000 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom left, #ff0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #1F2BDF 87.5%, #2940D0 93.75%, #DB6195 96.875%, #AE27F6 98.4375%, #69A847 99.21875%, #C97ED4 99.609375%, #33CFCF 99.8046875%, #ff0000 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(bottom left, #ff0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #1F2BDF 87.5%, #2940D0 93.75%, #DB6195 96.875%, #AE27F6 98.4375%, #69A847 99.21875%, #C97ED4 99.609375%, #33CFCF 99.8046875%, #ff0000 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #ff0000), color-stop(25, #FFFF00), color-stop(50, #05C1FF), color-stop(75, #FFFF00), color-stop(87.5, #1F2BDF), color-stop(93.75, #2940D0), color-stop(96.875, #DB6195), color-stop(98.4375, #AE27F6), color-stop(99.21875, #69A847), color-stop(99.609375, #C97ED4), color-stop(99.8046875, #33CFCF), color-stop(100, #ff0000));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom left, #ff0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #1F2BDF 87.5%, #2940D0 93.75%, #DB6195 96.875%, #AE27F6 98.4375%, #69A847 99.21875%, #C97ED4 99.609375%, #33CFCF 99.8046875%, #ff0000 100%);
+
+  /* W3C Markup */
+  background-image: linear-gradient(to top right, #ff0000 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, #1F2BDF 87.5%, #2940D0 93.75%, #DB6195 96.875%, #AE27F6 98.4375%, #69A847 99.21875%, #C97ED4 99.609375%, #33CFCF 99.8046875%, #ff0000 100%);
+}
+
+.center_wrapper{
+  max-width: 980px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.name{
+  float: left;
+  margin-bottom: 10px;
+
+}
+.name img{
+  float: left;
+  width: 150px;
+  border-radius: 90px 90px;
+  margin: 10px 0px;
+
+}
+.name p{
+  float: left;
+  color: #3f51b5;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-left: 10px;
+
+}
+.name img:hover{
+	transform: scaleX(-1);
+}
+
+header p:hover {
+	text-decoration: underline;
+}
+
+.main_menu{
+  margin-top: 10px;
+
+}
+.main_menu_nav{
+  margin-left: 100px;
+	display: inline-block;
+	margin-top: 20px;
+}
+.main_menu li {
+  margin-bottom: 10px;
+}
+
+.main_menu li i:hover {
+  text-decoration: underline;
+}
+
+.main_menu li:nth-last-child(2){
+
+}
+
+.main_menu li:nth-last-child(1){
+
+}
+
+.main_menu a {
+  color: #795548;
+}
+
+/*   основная часть*/
+.main_content{
+	margin-top: 200px;
+}
+
+.main_content_top{
+	margin-top: 20px;
+	border-top: chocolate 1px solid;
+}
+
+.page_title{
+	text-align: center;
+	font-family: 'Barrio', cursive;
+	font-size: 30px;
+	color: #FF5722;
+}
+
+.content{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.content .picture {
+	float: left;
+}
+.content img{
+	width: 400px;
+	border-radius: 25px;
+}
+
+.content img:hover{
+	-webkit-animation: shake 1s;
+  animation: shake 1s;
+
+}
+
+.content .item{
+	width: 540px;
+	float: right;
+}
+
+.content .item h2{
+	float: left;
+	margin-right: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.content .item p{
+	font-size: 18px;
+	font-family: 'Sanchez', serif;
+	}
+
+.content .btn{
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #3f51b5;
+  color: #3f51b5;
+}
+
+.content .btn:hover{
+	background: #9e9e9e;
+}
+
+/*кнопки вверх низ*/
+.topbutton {
+width:60px;
+border:2px solid red;
+background:#f7f7f7;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:60px;
+right:10px;
+cursor:pointer;
+color:#333;
+font-family:verdana;
+font-size:12px;
+text-decoration: none;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+.bottom_button {
+width:60px;
+border:2px solid red;
+background:#f7f7f7;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:10px;
+right:10px;
+cursor:pointer;
+color:#333;
+font-family:verdana;
+font-size:12px;
+text-decoration: none;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+.topbutton:hover, .bottom_button:hover{
+	color: red;
+	background: #2196f3;
+}
+
+
+/*еще одна кнопка вверх слева появляется*/
+.go_top {
+    position: fixed !important;
+    left: 0px;
+    bottom:100px;
+    color: #fff;
+
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+  display: none;
+    z-index: 9999;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: #39b54a;
+}
+
+/* еще одна вниз слева появляется*/
+.go_bottom {
+    position: fixed !important;
+    left: 0px;
+    bottom:50px;
+    color: #fff;
+
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+      display: none;
+    z-index: 9999;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: #39b54a;
+}
+
+a.go_top, a.go_bottom {
+	color: #fff;
+}
+
+/*слайдер*/
+.my-slider{
+	max-width:800px;
+	margin:0 auto;
+	border-left:1px solid;
+	border-right:1px solid;}
+
+.my-slider ul li{
+	position:relative;
+	color:#12DF50;
+	display:inline-block;
+	text-align: center;
+}
+
+.slider_img{
+	width: 50%;
+	display:inline-block;
+	}
+
+.unslider-arrow{ /*стили стрелок в файле unslider.css*/}
