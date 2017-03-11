@@ -378,3 +378,20 @@ a.go_top, a.go_bottom {
 	}
 
 .unslider-arrow{ /*стили стрелок в файле unslider.css*/}
+
+
+/* -------------------------------- content----------------------*/
+.contact_header{
+	position: relative;
+
+}
+.contact_form {
+	text-align: center;
+}
+
+textarea {
+    width: 93%;
+    min-height: 110px;
+    margin-bottom: 40px;
+    background: #eef0f5;
+}
