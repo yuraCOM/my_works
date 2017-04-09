@@ -458,27 +458,3 @@ a.go_top, a.go_bottom {
 .contact_form {
 	text-align: center;
 }
-
-
-/*------------------ about ------------------------------------*/
-
-.content .skills{
-	margin-top: 200px;
-	float: none;
-	color: #2231db;
-	font-family: 'Exo', sans-serif;
-}
-
-.skills h2{
-	font-size: 35px;
-	font-weight: bold;
-}
-.skills h3{
-	font-size: 30px;
-	/*text-decoration: underline;*/
-	margin-left: 50px;
-}
-.skills p{
-	font-size: 25px;
-	margin-left: 85px;
-}
